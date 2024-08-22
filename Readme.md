@@ -46,7 +46,7 @@ Depois de colocar o CSV no sistema de arquivos, você pode começar a usar o Spa
 
 #### Salvando os dataframes em novos CSVs
 
-    df_software.coalesce(1).write.csv("/user/spark/companies", header=True, sep=";")
+    df_software.coalesce(1).write.csv("/user/spark/software", header=True, sep=";")
 
 Como estamos utilizando o HDFS, o comando coalesce(1) é usado para garantir que o arquivo resultante esteja em uma única parte. Assim, o arquivo final será chamado de software.csv. Após salvar o CSV, vamos mover e renomear o arquivo para facilitar o tratamento dos caminhos.
 
